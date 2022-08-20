@@ -1,0 +1,12 @@
+#mysql
+spring:
+  datasource:
+    url: jdbc:mysql://springboot-db.ckzxwo2jkm2c.ap-northeast-2.rds.amazonaws.com:3306/checkmovie
+    username: admin
+    password: dalc2022
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  application:
+    name: user-service
+  main:
+    allow-circular-references: true
