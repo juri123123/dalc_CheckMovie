@@ -24,4 +24,7 @@ public class CheckMovie {
     @Column(columnDefinition = "TEXT")
     private String plot;
 
+    @Column(columnDefinition = "TEXT")
+    private String movie_img;
+
 }

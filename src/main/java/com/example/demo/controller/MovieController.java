@@ -1,25 +1,24 @@
 package com.example.demo.controller;
 import com.example.demo.service.MovieService;
 import com.example.demo.dto.CheckMovieDto;
-import com.example.demo.service.MovieService;
-import com.example.demo.dto.MovieDto;
 import com.example.demo.entity.CheckMovie;
 import com.example.demo.entity.Movie;
-import com.example.demo.repository.CheckMovieRepository;
 import com.example.demo.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 
 @Controller
 public class MovieController {
 
     @Autowired
     private MovieService movieService;
+    @Autowired
+    private MovieRepository movieRepository;
 
     @RequestMapping("/recommend")
     public String recommend() {
@@ -35,12 +34,12 @@ public class MovieController {
 
 
     //db에 저장된 전체 영화 목록 -> MovieDto
-    @GetMapping("/movieAll")
+    @RequestMapping("/movieAll")
     public String allMovie(Model model) {
-        List<MovieDto> movieDtoList = movieService.getMovieList(); //- > movieRepository
-        model.addAttribute("MovieList", movieDtoList); // addattribute 부분 front 에서 구현 필요
+        List<Movie> movieList = movieRepository.findAll(); //- > movieRepository
+        model.addAttribute("movieList", movieList);
 
-        return "02-checkmovie"; // 목록
+        return "index2"; // 목록
     }
 
 }

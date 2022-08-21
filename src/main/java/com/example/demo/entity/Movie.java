@@ -8,7 +8,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 @ToString
-@AllArgsConstructor
 @NoArgsConstructor
 public class Movie {
     @Id
@@ -20,5 +19,11 @@ public class Movie {
 
     @Column(columnDefinition = "TEXT")
     private String movie_img;
+
+    public Movie(Integer movie_id, String title, String movie_img){
+        this.movie_id = movie_id;
+        this.title = title;
+        this.movie_img = movie_img;
+    }
 
 }
