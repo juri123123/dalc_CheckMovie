@@ -1,13 +1,15 @@
 package com.example.demo.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Setter
 @Getter
 @Entity
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Book {
 
     @Id
@@ -22,4 +24,5 @@ public class Book {
 
     @Column(columnDefinition = "TEXT")
     private String plot;
+
 }
