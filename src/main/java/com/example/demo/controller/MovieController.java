@@ -39,9 +39,10 @@ public class MovieController {
     //db에 저장된 전체 영화 목록
     @GetMapping("/movieAll")
     public String allMovie(Model model) {
-        List<Movie> movieList = movieRepository.findAll();
-        model.addAttribute("MovieList", movieList); // addattribute 부분 front 에서 구현 필요
+        List<MovieDto> movieDtoList = movieService.getMovieList();
+        model.addAttribute("MovieList", movieDtoList); // addattribute 부분 front 에서 구현 필요
 
         return "02-checkmovie"; // 목록
     }
+
 }
