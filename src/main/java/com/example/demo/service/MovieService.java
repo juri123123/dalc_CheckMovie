@@ -1,4 +1,4 @@
-package com.example.demo.Service;
+package com.example.demo.service;
 
 import com.example.demo.dto.CheckMovieDto;
 import com.example.demo.dto.MovieDto;
@@ -36,8 +36,7 @@ public class MovieService {
             MovieDto movieDto = MovieDto.builder()
                     .movie_id(movie.getMovie_id())
                     .title(movie.getTitle())
-                    .genre(movie.getGenre())
-                    .plot(movie.getPlot())
+                    .movie_img(movie.getMovie_img())
                     .build();
 
             movieDtoList.add(movieDto);

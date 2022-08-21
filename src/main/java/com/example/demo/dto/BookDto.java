@@ -11,11 +11,11 @@ public class BookDto {
 
     private String title;
 
-    private String genre;
+    private String description;
 
-    private String plot;
+    private String book_img;
 
     public Book toEntity() {
-        return new Book(book_id, title, genre, plot);
+        return new Book(book_id, title, description, book_img);
     }
 }
