@@ -18,12 +18,6 @@ public class CheckMovie {
     @Column(length = 200)
     private String title;
 
-    @Column(length = 200)
-    private String genre;
-
-    @Column(columnDefinition = "TEXT")
-    private String plot;
-
     @Column(columnDefinition = "TEXT")
     private String movie_img;
 

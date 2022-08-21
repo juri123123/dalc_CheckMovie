@@ -14,7 +14,7 @@
 <tr th:each = "m : ${movieList}">
     <td th:text = ${m.movie_id}></td>
     <td th:text = ${m.title}></td>
-    <td th:text = ${m.movie_img}></td>
+    <img th:src = "${m.movie_img}" th:if="${m.movie_img != null}"/>
 </tr>
 </body>
 

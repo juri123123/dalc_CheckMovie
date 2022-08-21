@@ -13,13 +13,9 @@ public class CheckMovieDto {
 
     private String title;
 
-    private String genre;
-
-    private String plot;
-
     private String movie_img;
 
     public CheckMovie toEntity() {
-        return new CheckMovie(movie_id, title, genre, plot, movie_img);
+        return new CheckMovie(movie_id, title, movie_img);
     }
 }
