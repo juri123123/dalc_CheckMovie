@@ -19,10 +19,10 @@ public class Book {
     @Column(length = 200)
     private String title;
 
-    @Column(length = 200)
-    private String genre;
+    @Column(columnDefinition = "TEXT")
+    private String description;
 
     @Column(columnDefinition = "TEXT")
-    private String plot;
+    private String book_img;
 
 }

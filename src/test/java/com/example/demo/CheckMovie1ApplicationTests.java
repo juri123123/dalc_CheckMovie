@@ -16,8 +16,6 @@ class CheckMovie1ApplicationTests {
 	void contextLoads() {
 		Movie m1 = new Movie();
 		m1.setTitle("나니아연대기");
-		m1.setGenre("판타지");
-		m1.setPlot("어쩌구 저쩌구 환상과 모험의 이야기");
 		this.movieRepository.save(m1);
 	}
 

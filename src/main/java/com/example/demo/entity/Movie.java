@@ -18,10 +18,7 @@ public class Movie {
     @Column(length = 200)
     private String title;
 
-    @Column(length = 200)
-    private String genre;
-
     @Column(columnDefinition = "TEXT")
-    private String plot;
+    private String movie_img;
 
 }
