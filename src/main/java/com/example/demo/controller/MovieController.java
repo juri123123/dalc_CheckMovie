@@ -1,8 +1,11 @@
 package com.example.demo.controller;
 
 import com.example.demo.Service.MovieService;
+import com.example.demo.dto.CheckMovieDto;
 import com.example.demo.dto.MovieDto;
+import com.example.demo.entity.CheckMovie;
 import com.example.demo.entity.Movie;
+import com.example.demo.repository.CheckMovieRepository;
 import com.example.demo.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,9 +21,6 @@ import java.util.List;
 public class MovieController {
 
     @Autowired
-    private MovieRepository movieRepository;
-
-    @Autowired
     private MovieService movieService;
 
     @RequestMapping("/recommend")
@@ -28,18 +28,18 @@ public class MovieController {
         return "03-recommend";
     }
 
-    //movie check 한 것
+    //movie check 한 것 -> checkmovieDto
     @GetMapping("/moviecheck")
-    public String checkMovie(MovieDto movieDto) {
-        Movie movie = movieService.savemovie(movieDto); // 선택한 것 저장
+    public String checkMovie(CheckMovieDto checkmovieDto) {
+        CheckMovie checkMovie = movieService.savemovie(checkmovieDto); // 선택한 것 저장 -> checkmovieRepository
         return "";
     }
 
 
-    //db에 저장된 전체 영화 목록
+    //db에 저장된 전체 영화 목록 -> MovieDto
     @GetMapping("/movieAll")
     public String allMovie(Model model) {
-        List<MovieDto> movieDtoList = movieService.getMovieList();
+        List<MovieDto> movieDtoList = movieService.getMovieList(); //- > movieRepository
         model.addAttribute("MovieList", movieDtoList); // addattribute 부분 front 에서 구현 필요
 
         return "02-checkmovie"; // 목록

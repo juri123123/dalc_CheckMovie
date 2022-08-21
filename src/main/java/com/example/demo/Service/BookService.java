@@ -11,7 +11,7 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
-    // 선택한 책 저장
+    // 책 저장
     public Book savebook(BookDto bookDto) {
         Book book = bookDto.toEntity();
 

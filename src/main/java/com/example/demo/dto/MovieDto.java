@@ -1,13 +1,11 @@
 package com.example.demo.dto;
 
 import com.example.demo.entity.Movie;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.ToString;
 
 import javax.persistence.criteria.CriteriaBuilder;
 
-@AllArgsConstructor
 @ToString
 public class MovieDto {
 
