@@ -366,10 +366,10 @@
                                 <!--**********************선택된 책************************-->
                                 <!-- Swiper -->
                                 <!-- Swiper -->
-                                <div class="swiper mySwiper" th:each = "b : ${bookList}">
+                                <div class="swiper mySwiper">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="swiper-img"><img th:src = "${b.book_img}" th:if="${b.book_img != null}"/></div>
+                                            <div class="swiper-img"><img th:src = "${bookList[0].book_img}" th:if="${bookList[0].book_img != null}" /></div>
                                             <div class="explain">
                                                 <div class="s_login">
                                                     <img class="ellipse-1" src="img/ellipse-1-4@2x.png" />
@@ -379,10 +379,9 @@
                                                 </div>
                                                 <div class="overlap-group-2">
                                                     <div class="text-container">
-                                                        <div class="text_label" th:text = ${b.book_id}></div>
-                                                        <div class="text_label" th:text = ${b.title}></div>
-                                                        <p class="text-65">
-                                                        <td th:text = ${b.description}></td>
+                                                        <div class="text_label" th:text = ${bookList[0].title}></div>
+                                                        <p class="text-65" th:text = ${bookList[0].description}>
+                                                            책설명
                                                         </p>
                                                     </div>
                                                     <div class="stars"><!--**********************점수매기기************************-->
@@ -400,7 +399,133 @@
                                                 </div>
                                             </div>
                                         </div>
-                                <!--**********************선택된 책************************-->
+                                        <div class="swiper-slide">
+                                            <div class="swiper-img"><img th:src = "${bookList[1].book_img}" th:if="${bookList[1].book_img != null}" /></div>
+                                            <div class="explain">
+                                                <div class="s_login">
+                                                    <img class="ellipse-1" src="img/ellipse-1-4@2x.png" />
+                                                    <img class="ellipse-2" src="img/ellipse-2-4@2x.png" />
+                                                    <img class="ellipse-4" src="img/ellipse-4-4@2x.png" />
+                                                    <img class="ellipse-3" src="img/ellipse-3-4@2x.png" />
+                                                </div>
+                                                <div class="overlap-group-2">
+                                                    <div class="text-container">
+                                                        <div class="text_label" th:text = ${bookList[1].title}></div>
+                                                        <p class="text-65" th:text = ${bookList[1].description}>
+                                                            책설명
+                                                        </p>
+                                                    </div>
+                                                    <div class="stars"><!--**********************점수매기기************************-->
+                                                        <div id="stars2_1" onclick="checkStar2(1)" class="text-61">
+                                                        </div>
+                                                        <div id="stars2_2" onclick="checkStar2(2)" class="text-6">
+                                                        </div>
+                                                        <div id="stars2_3" onclick="checkStar2(3)" class="text-6">
+                                                        </div>
+                                                        <div id="stars2_4" onclick="checkStar2(4)" class="text-6-1">
+                                                        </div>
+                                                        <div id="stars2_5" onclick="checkStar2(5)" class="text-6-1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="swiper-img"><img th:src = "${bookList[2].book_img}" th:if="${bookList[2].book_img != null}" /></div>
+                                            <div class="explain">
+                                                <div class="s_login">
+                                                    <img class="ellipse-1" src="img/ellipse-1-4@2x.png" />
+                                                    <img class="ellipse-2" src="img/ellipse-2-4@2x.png" />
+                                                    <img class="ellipse-4" src="img/ellipse-4-4@2x.png" />
+                                                    <img class="ellipse-3" src="img/ellipse-3-4@2x.png" />
+                                                </div>
+                                                <div class="overlap-group-2">
+                                                    <div class="text-container">
+                                                        <div class="text_label" th:text = ${bookList[2].title}></div>
+                                                        <p class="text-65" th:text = ${bookList[2].description}>
+                                                            책설명
+                                                        </p>
+                                                    </div>
+                                                    <div class="stars"><!--**********************점수매기기************************-->
+                                                        <div id="stars3_1" onclick="checkStar3(1)" class="text-61">
+                                                        </div>
+                                                        <div id="stars3_2" onclick="checkStar3(2)" class="text-6">
+                                                        </div>
+                                                        <div id="stars3_3" onclick="checkStar3(3)" class="text-6">
+                                                        </div>
+                                                        <div id="stars3_4" onclick="checkStar3(4)" class="text-6-1">
+                                                        </div>
+                                                        <div id="stars3_5" onclick="checkStar3(5)" class="text-6-1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="swiper-img"><img th:src = "${bookList[3].book_img}" th:if="${bookList[3].book_img != null}" /></div>
+                                            <div class="explain">
+                                                <div class="s_login">
+                                                    <img class="ellipse-1" src="img/ellipse-1-4@2x.png" />
+                                                    <img class="ellipse-2" src="img/ellipse-2-4@2x.png" />
+                                                    <img class="ellipse-4" src="img/ellipse-4-4@2x.png" />
+                                                    <img class="ellipse-3" src="img/ellipse-3-4@2x.png" />
+                                                </div>
+                                                <div class="overlap-group-2">
+                                                    <div class="text-container">
+                                                        <div class="text_label" th:text = ${bookList[3].title}></div>
+                                                        <p class="text-65" th:text = ${bookList[3].description}>
+                                                            책설명
+                                                        </p>
+                                                    </div>
+                                                    <div class="stars"><!--**********************점수매기기************************-->
+                                                        <div id="stars4_1" onclick="checkStar4(1)" class="text-61">
+                                                        </div>
+                                                        <div id="stars4_2" onclick="checkStar4(2)" class="text-6">
+                                                        </div>
+                                                        <div id="stars4_3" onclick="checkStar4(3)" class="text-6">
+                                                        </div>
+                                                        <div id="stars4_4" onclick="checkStar4(4)" class="text-6-1">
+                                                        </div>
+                                                        <div id="stars4_5" onclick="checkStar4(5)" class="text-6-1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="swiper-img"><img th:src = "${bookList[4].book_img}" th:if="${bookList[4].book_img != null}" /></div>
+                                            <div class="explain">
+                                                <div class="s_login">
+                                                    <img class="ellipse-1" src="img/ellipse-1-4@2x.png" />
+                                                    <img class="ellipse-2" src="img/ellipse-2-4@2x.png" />
+                                                    <img class="ellipse-4" src="img/ellipse-4-4@2x.png" />
+                                                    <img class="ellipse-3" src="img/ellipse-3-4@2x.png" />
+                                                </div>
+                                                <div class="overlap-group-2">
+                                                    <div class="text-container">
+                                                        <div class="text_label" th:text = ${bookList[4].title}></div>
+                                                        <p class="text-65" th:text = ${bookList[4].description}>
+                                                            책설명
+                                                        </p>
+                                                    </div>
+                                                    <div class="stars"><!--**********************점수매기기************************-->
+                                                        <div id="stars5_1" onclick="checkStar5(1)" class="text-61">
+                                                        </div>
+                                                        <div id="stars5_2" onclick="checkStar5(2)" class="text-6">
+                                                        </div>
+                                                        <div id="stars5_3" onclick="checkStar5(3)" class="text-6">
+                                                        </div>
+                                                        <div id="stars5_4" onclick="checkStar5(4)" class="text-6-1">
+                                                        </div>
+                                                        <div id="stars5_5" onclick="checkStar5(5)" class="text-6-1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+<!--                                **********************선택된 책************************-->
 
 
 

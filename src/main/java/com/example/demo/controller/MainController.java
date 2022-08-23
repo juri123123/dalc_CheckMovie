@@ -15,7 +15,7 @@ public class MainController {
     @Autowired
     private MovieRepository movieRepository;
 
-    @RequestMapping("/main")
+    @RequestMapping("/01-main-origin.html")
     public String index(Model model) {
         List<Movie> newmovieList = movieRepository.findAll(); //- > movieRepository
         model.addAttribute("newmovieList", newmovieList);
