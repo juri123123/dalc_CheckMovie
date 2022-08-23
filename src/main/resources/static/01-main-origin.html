@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<<html lang="ko" xmlns:th="http://www.thymeleaf.org" >>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8" />
@@ -207,17 +207,21 @@
                     <!--***********************<(선택한게 아닌 전체)영화 부분>*************************-->
                     <!--swiper-->
                     <div class="swiper mySwiper">
-                        <tr th:each = "m : ${newmovieList}">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img th:src = "${m.movie_img}" th:if="${m.movie_img != null}"/>
-                                </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </tr>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img th:src = "${newmovieList[0].movie_img}" th:if="${newmovieList[0].movie_img != null}"/></div>
+                            <div class="swiper-slide"><img th:src = "${newmovieList[1].movie_img}" th:if="${newmovieList[1].movie_img != null}"/></div>
+                            <div class="swiper-slide"><img th:src = "${newmovieList[2].movie_img}" th:if="${newmovieList[2].movie_img != null}"/></div>
+                            <div class="swiper-slide"><img th:src = "${newmovieList[3].movie_img}" th:if="${newmovieList[3].movie_img != null}"/></div>
+                            <div class="swiper-slide"><img th:src = "${newmovieList[4].movie_img}" th:if="${newmovieList[4].movie_img != null}"/></div>
+                            <div class="swiper-slide"><img th:src = "${newmovieList[5].movie_img}" th:if="${newmovieList[5].movie_img != null}"/></div>
+                            <div class="swiper-slide"><img th:src = "${newmovieList[6].movie_img}" th:if="${newmovieList[6].movie_img != null}"/></div>
+                            <div class="swiper-slide"><img th:src = "${newmovieList[7].movie_img}" th:if="${newmovieList[7].movie_img != null}"/></div>
+                            <div class="swiper-slide"><img th:src = "${newmovieList[8].movie_img}" th:if="${newmovieList[8].movie_img != null}"/></div>
+                            <div class="swiper-slide"><img th:src = "${newmovieList[9].movie_img}" th:if="${newmovieList[9].movie_img != null}"/></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
-
                     <!--*********************************************************************-->
 
 
@@ -305,4 +309,4 @@
 </form>
 </body>
 
-</>
+</html>
