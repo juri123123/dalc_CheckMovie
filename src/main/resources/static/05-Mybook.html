@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" >
 <!--more 이동 오류-->
 
 <head>
@@ -175,15 +175,15 @@
                                 <!--swiper-->
                                 <div class="swiper mySwiper">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide">Slide 1</div>
-                                        <div class="swiper-slide">Slide 2</div>
-                                        <div class="swiper-slide">Slide 3</div>
-                                        <div class="swiper-slide">Slide 4</div>
-                                        <div class="swiper-slide">Slide 5</div>
-                                        <div class="swiper-slide">Slide 6</div>
-                                        <div class="swiper-slide">Slide 7</div>
-                                        <div class="swiper-slide">Slide 8</div>
-                                        <div class="swiper-slide">Slide 9</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[0].book_img}" th:if="${bookList[0].book_img != null}"/>Slide 1</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[1].book_img}" th:if="${bookList[1].book_img != null}"/>Slide 2</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[2].book_img}" th:if="${bookList[2].book_img != null}"/>Slide 3</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[3].book_img}" th:if="${bookList[3].book_img != null}"/>Slide 4</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[4].book_img}" th:if="${bookList[4].book_img != null}"/>Slide 5</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[5].book_img}" th:if="${bookList[5].book_img != null}"/>Slide 6</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[6].book_img}" th:if="${bookList[6].book_img != null}"/>Slide 7</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[7].book_img}" th:if="${bookList[7].book_img != null}"/>Slide 8</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[8].book_img}" th:if="${bookList[8].book_img != null}"/>Slide 9</div>
                                     </div>
                                     <div class="swiper-button-next"></div>
                                     <div class="swiper-button-prev"></div>
@@ -239,15 +239,15 @@
                             <!--swiper-->
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><!--이미지(제목없음)--></div>
-                                    <div class="swiper-slide"><!--이미지(제목없음)--></div>
-                                    <div class="swiper-slide"><!--이미지(제목없음)--></div>
-                                    <div class="swiper-slide"><!--이미지(제목없음)--></div>
-                                    <div class="swiper-slide"><!--이미지(제목없음)--></div>
-                                    <div class="swiper-slide"><!--이미지(제목없음)--></div>
-                                    <div class="swiper-slide"><!--이미지(제목없음)--></div>
-                                    <div class="swiper-slide"><!--이미지(제목없음)--></div>
-                                    <div class="swiper-slide"><!--이미지(제목없음)--></div>
+                                    <div class="swiper-slide"><img th:src = "${movieList[0].movie_img}" th:if="${movieList[0].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                    <div class="swiper-slide"><img th:src = "${movieList[1].movie_img}" th:if="${movieList[1].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                    <div class="swiper-slide"><img th:src = "${movieList[2].movie_img}" th:if="${movieList[2].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                    <div class="swiper-slide"><img th:src = "${movieList[3].movie_img}" th:if="${movieList[3].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                    <div class="swiper-slide"><img th:src = "${movieList[4].movie_img}" th:if="${movieList[4].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                    <div class="swiper-slide"><img th:src = "${movieList[5].movie_img}" th:if="${movieList[5].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                    <div class="swiper-slide"><img th:src = "${movieList[6].movie_img}" th:if="${movieList[6].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                    <div class="swiper-slide"><img th:src = "${movieList[7].movie_img}" th:if="${movieList[7].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                    <div class="swiper-slide"><img th:src = "${movieList[8].movie_img}" th:if="${movieList[8].movie_img != null}"/><!--이미지(제목없음)--></div>
                                 </div>
                                 <div class="swiper-button-next"></div>
                                 <div class="swiper-button-prev"></div>
@@ -297,22 +297,22 @@
 
                             
                             <!--**********************추천된 책************************-->
-                            <!--swiper-->
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">Slide 1</div>
-                                    <div class="swiper-slide">Slide 2</div>
-                                    <div class="swiper-slide">Slide 3</div>
-                                    <div class="swiper-slide">Slide 4</div>
-                                    <div class="swiper-slide">Slide 5</div>
-                                    <div class="swiper-slide">Slide 6</div>
-                                    <div class="swiper-slide">Slide 7</div>
-                                    <div class="swiper-slide">Slide 8</div>
-                                    <div class="swiper-slide">Slide 9</div>
+                                <!--swiper-->
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img th:src = "${bookList[0].book_img}" th:if="${bookList[0].book_img != null}"/>Slide 1</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[1].book_img}" th:if="${bookList[1].book_img != null}"/>Slide 2</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[2].book_img}" th:if="${bookList[2].book_img != null}"/>Slide 3</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[3].book_img}" th:if="${bookList[3].book_img != null}"/>Slide 4</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[4].book_img}" th:if="${bookList[4].book_img != null}"/>Slide 5</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[5].book_img}" th:if="${bookList[5].book_img != null}"/>Slide 6</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[6].book_img}" th:if="${bookList[6].book_img != null}"/>Slide 7</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[7].book_img}" th:if="${bookList[7].book_img != null}"/>Slide 8</div>
+                                        <div class="swiper-slide"><img th:src = "${bookList[8].book_img}" th:if="${bookList[8].book_img != null}"/>Slide 9</div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
                             <!--**********************추천된 책************************-->
 
 

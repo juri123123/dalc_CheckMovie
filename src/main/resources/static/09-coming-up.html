@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8" />
@@ -180,18 +180,23 @@
 
                         <!--swiper-->
                         <!--**********************국내영화 이미지************************-->
+                        <div class="flex-row-3">
+                        <!--swiper-->
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">Slide 1</div>
-                                <div class="swiper-slide">Slide 2</div>
-                                <div class="swiper-slide">Slide 3</div>
-                                <div class="swiper-slide">Slide 4</div>
-                                <div class="swiper-slide">Slide 5</div>
-                                <div class="swiper-slide">Slide 6</div>
-                                <div class="swiper-slide">Slide 7</div>
-                                <div class="swiper-slide">Slide 8</div>
-                                <div class="swiper-slide">Slide 9</div>
+                                <div class="swiper-slide"><img th:src = "${movieList[0].movie_img}" th:if="${movieList[0].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[1].movie_img}" th:if="${movieList[1].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[2].movie_img}" th:if="${movieList[2].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[3].movie_img}" th:if="${movieList[3].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[4].movie_img}" th:if="${movieList[4].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[5].movie_img}" th:if="${movieList[5].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[6].movie_img}" th:if="${movieList[6].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[7].movie_img}" th:if="${movieList[7].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[8].movie_img}" th:if="${movieList[8].movie_img != null}"/><!--이미지(제목없음)--></div>
                             </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
                             <!--**********************국내영화 이미지************************-->
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
@@ -232,15 +237,15 @@
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <!--**********************국외영화 이미지************************-->
-                                <div class="swiper-slide">Slide 1</div>
-                                <div class="swiper-slide">Slide 2</div>
-                                <div class="swiper-slide">Slide 3</div>
-                                <div class="swiper-slide">Slide 4</div>
-                                <div class="swiper-slide">Slide 5</div>
-                                <div class="swiper-slide">Slide 6</div>
-                                <div class="swiper-slide">Slide 7</div>
-                                <div class="swiper-slide">Slide 8</div>
-                                <div class="swiper-slide">Slide 9</div>
+                                <div class="swiper-slide"><img th:src = "${movieList[0].movie_img}" th:if="${movieList[0].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[1].movie_img}" th:if="${movieList[1].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[2].movie_img}" th:if="${movieList[2].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[3].movie_img}" th:if="${movieList[3].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[4].movie_img}" th:if="${movieList[4].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[5].movie_img}" th:if="${movieList[5].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[6].movie_img}" th:if="${movieList[6].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[7].movie_img}" th:if="${movieList[7].movie_img != null}"/><!--이미지(제목없음)--></div>
+                                <div class="swiper-slide"><img th:src = "${movieList[8].movie_img}" th:if="${movieList[8].movie_img != null}"/><!--이미지(제목없음)--></div>
                                 <!--**********************국외영화 이미지************************-->
                             </div>
                             <div class="swiper-button-next"></div>

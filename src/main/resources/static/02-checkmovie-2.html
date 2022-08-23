@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <!--Overseas-->
 
 <head>
@@ -190,7 +190,7 @@
                                     <!-- Swiper2 -->
                                     <!--수정-->
                                     <div class="swiper-abroad mySwiper">
-                                        <div class="swiper-wrapper">
+                                        <div class="swiper-wrapper"  th:each = "m : ${movieList}">>
                                             <div class="swiper-slide">
                                                 <!--**********************백그라운드로 이미지가 깔려있음*************************-->
                                                 <div id='click1' class="overlap-group9  border-1px-black-3"

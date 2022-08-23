@@ -39,7 +39,7 @@ public class MovieController {
         List<Movie> movieList = movieRepository.findAll(); //- > movieRepository
         model.addAttribute("movieList", movieList);
 
-        return "index2"; // 목록
+        return "02-checkmovie"; // 목록
     }
 
 }
