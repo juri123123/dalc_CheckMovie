@@ -62,7 +62,7 @@
 </head>
 
 <body style="margin: 0; background: #ffffff">
-    <form class="checkmovie_form" action="#" accept-charset="utf-8" name="coming-up" method="get">
+    <form class="checkmovie_form" action="#" accept-charset="utf-8" name="swiper-data-coming-up" method="get">
         <input type="hidden" id="anPageName" name="page" value="09-coming-up" />
         <div class="container-center-horizontal">
             <div class="x09-coming-up screen">
@@ -77,7 +77,7 @@
                             <div class="navbar-link-place"><a class='a_nav' href='01-main-origin.html'>Home</a></div>
                             <div class="navbar-link-login"><a class='a_nav' href='04-login.html'>Login</a></div>
                             <div class="navbar-link-sign-up"><a class='a_nav' href='04-1-signup.html'>Sign Up</a></div>
-                            <div class="navbar-link-my-page"><a class='a_nav' href='05-Mybook.html'>My Page</a></div>
+                            <div class="navbar-link-my-page"><a class='a_nav' href='10-my-page.html'>My Page</a></div>
                         </div>
                         <div class="overlap-group-2 border-3px-blue-zodiac">
                             <input type="text" name="q" class="input-box input-q" value="search">
@@ -180,26 +180,52 @@
 
                         <!--swiper-->
                         <!--**********************국내영화 이미지************************-->
-                        <div class="flex-row-3">
-                        <!--swiper-->
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img th:src = "${movieList[10].movie_img}" th:if="${movieList[10].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[11].movie_img}" th:if="${movieList[11].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[12].movie_img}" th:if="${movieList[12].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[13].movie_img}" th:if="${movieList[13].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[14].movie_img}" th:if="${movieList[14].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[15].movie_img}" th:if="${movieList[15].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[16].movie_img}" th:if="${movieList[16].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[17].movie_img}" th:if="${movieList[17].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[18].movie_img}" th:if="${movieList[18].movie_img != null}"/><!--이미지(제목없음)--></div>
+                        <div class="flex-row-3" style="overflow: visible;">
+                            <!--swiper-->
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img th:src="${movieList[10].movie_img}"
+                                            th:if="${movieList[10].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[11].movie_img}"
+                                            th:if="${movieList[11].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[12].movie_img}"
+                                            th:if="${movieList[12].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[13].movie_img}"
+                                            th:if="${movieList[13].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[14].movie_img}"
+                                            th:if="${movieList[14].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[15].movie_img}"
+                                            th:if="${movieList[15].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[16].movie_img}"
+                                            th:if="${movieList[16].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[17].movie_img}"
+                                            th:if="${movieList[17].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[18].movie_img}"
+                                            th:if="${movieList[18].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
                             <!--**********************국내영화 이미지************************-->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                            
                         </div>
 
                         <!-- Swiper JS -->
@@ -234,24 +260,53 @@
                 <div class="overlap-group11">
                     <div class="rectangle-61">
                         <!--swiper-->
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <!--**********************국외영화 이미지************************-->
-                                <div class="swiper-slide"><img th:src = "${movieList[0].movie_img}" th:if="${movieList[0].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[1].movie_img}" th:if="${movieList[1].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[2].movie_img}" th:if="${movieList[2].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[3].movie_img}" th:if="${movieList[3].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[4].movie_img}" th:if="${movieList[4].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[5].movie_img}" th:if="${movieList[5].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[6].movie_img}" th:if="${movieList[6].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[7].movie_img}" th:if="${movieList[7].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <div class="swiper-slide"><img th:src = "${movieList[8].movie_img}" th:if="${movieList[8].movie_img != null}"/><!--이미지(제목없음)--></div>
-                                <!--**********************국외영화 이미지************************-->
+                        <div class="flex-row-3" style="overflow: visible;">
+                            <!--swiper-->
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img th:src="${movieList[10].movie_img}"
+                                            th:if="${movieList[10].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[11].movie_img}"
+                                            th:if="${movieList[11].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[12].movie_img}"
+                                            th:if="${movieList[12].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[13].movie_img}"
+                                            th:if="${movieList[13].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[14].movie_img}"
+                                            th:if="${movieList[14].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[15].movie_img}"
+                                            th:if="${movieList[15].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[16].movie_img}"
+                                            th:if="${movieList[16].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[17].movie_img}"
+                                            th:if="${movieList[17].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                    <div class="swiper-slide"><img th:src="${movieList[18].movie_img}"
+                                            th:if="${movieList[18].movie_img != null}" />
+                                        <!--이미지(제목없음)-->
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                            <!--**********************국내영화 이미지************************-->
+                            
                         </div>
-
                         <!-- Swiper JS -->
                         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
