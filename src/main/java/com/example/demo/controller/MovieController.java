@@ -25,18 +25,26 @@ public class MovieController {
     @Autowired
     private BookRepository bookRepository;
 
+    // book_id 로 찾기 ! -> 아직 id 없어서 오류남
     @RequestMapping("/03-recommend.html")
-    public String recommend(Model model) {
-        List<Book> bookList = bookRepository.findAll(); //- > bookRepository
-        model.addAttribute("bookList", bookList);
+    public String recommend(@PathVariable Integer book_id, Model model) {
+//        List<Book> bookList = bookRepository.findAll(); //- > bookRepository
+//        model.addAttribute("bookList", bookList);
+
+        Book book = bookRepository.findById(book_id).orElse(null);
+        model.addAttribute("book", book);
 
         return "03-recommend";
     }
 
+    // book_id 로 찾기 ! -> 아직 id 없어서 오류남
     @RequestMapping("/02-1-checkmovie_result.html")
-    public String result(Model model) {
-        List<Book> bookList = bookRepository.findAll(); //- > bookRepository
-        model.addAttribute("bookList", bookList);
+    public String result(@PathVariable Integer book_id, Model model) {
+//        List<Book> bookList = bookRepository.findAll(); //- > bookRepository
+//        model.addAttribute("bookList", bookList);
+
+        Book book = bookRepository.findById(book_id).orElse(null);
+        model.addAttribute("book", book);
 
         return "02-1-checkmovie_result";
     }
