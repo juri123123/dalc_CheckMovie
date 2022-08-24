@@ -341,13 +341,13 @@
                                                         th:if="${movieList[num].movie_img != null}" />
                                                     <div class="caption-bg"></div>
                                                     <div class="text-21 opensans-bold-white-20px"
-                                                        th:text=${movieList[num].title}></div>
+                                                        th:text=${movieList[num].title}"></div>
                                                 </th:block>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="place-2">
-                                        <form method="post" action="">
+                                        <form action="/02-checkmovie-2.html" method="post">
                                             <input type="submit" value="Get book recommendations" class="recommend-btn">
                                         </form>
                                     </div>

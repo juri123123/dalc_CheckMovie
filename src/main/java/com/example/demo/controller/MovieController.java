@@ -1,4 +1,5 @@
 package com.example.demo.controller;
+import com.example.demo.dto.MovieDto;
 import com.example.demo.entity.Book;
 import com.example.demo.repository.BookRepository;
 import com.example.demo.service.MovieService;
@@ -21,7 +22,6 @@ public class MovieController {
     private MovieService movieService;
     @Autowired
     private MovieRepository movieRepository;
-
     @Autowired
     private BookRepository bookRepository;
 
@@ -37,7 +37,6 @@ public class MovieController {
         return "03-recommend";
     }
 
-    // book_id 로 찾기 ! -> 아직 id 없어서 오류남
     @RequestMapping("/02-1-checkmovie_result.html")
     public String result(@PathVariable Integer book_id, Model model) {
 //        List<Book> bookList = bookRepository.findAll(); //- > bookRepository
@@ -103,8 +102,8 @@ public class MovieController {
 
     //check 한거 checkmovieRepository로
     @PostMapping("/02-checkmovie.html")
-    public String checkmovietoForm(CheckMovieDto checkmovieDto) {
-        CheckMovie checkMovie = movieService.savemovie(checkmovieDto); // checkmovierepository 로 저장
+    public String checkmovietoForm(MovieDto checkMovieDto) {
+        Movie checkMovie = movieService.savemovie(checkMovieDto); // checkmovierepository 로 저장
 
         return "02-1-checkmovie_result";
     }
@@ -119,8 +118,8 @@ public class MovieController {
     }
 
     @PostMapping("/02-checkmovie-2.html")
-    public String checkmovietoForm2(CheckMovieDto checkmovieDto) {
-        CheckMovie checkMovie = movieService.savemovie(checkmovieDto); // checkmovierepository 로 저장
+    public String checkmovietoForm2(MovieDto checkmovieDto) {
+        Movie checkMovie = movieService.savemovie(checkmovieDto); // checkmovierepository 로 저장
 
         return "02-1-checkmovie_result";
     }
