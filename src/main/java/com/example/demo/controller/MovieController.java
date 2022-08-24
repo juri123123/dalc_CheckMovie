@@ -102,4 +102,12 @@ public class MovieController {
         return "02-checkmovie"; // 목록
     }
 
+    @RequestMapping("/02-checkmovie-2.html")
+    public String allMovie2(Model model) {
+        List<Movie> movieList = movieRepository.findAll(); //- > movieRepository
+        model.addAttribute("movieList", movieList);
+
+        return "02-checkmovie-2"; // 목록
+    }
+
 }
