@@ -84,16 +84,7 @@ public class MovieController {
         return "09-coming-up";
     }
 
-
-    //movie check 한 것 -> checkmovieDto
-    @GetMapping("/moviecheck")
-    public String checkMovie(CheckMovieDto checkmovieDto) {
-        CheckMovie checkMovie = movieService.savemovie(checkmovieDto); // 선택한 것 저장 -> checkmovieRepository
-        return "";
-    }
-
-
-    //db에 저장된 전체 영화 목록 -> MovieDto
+    //db에 저장된 전체 영화 목록
     @RequestMapping("/02-checkmovie.html")
     public String allMovie(Model model) {
         List<Movie> movieList = movieRepository.findAll(); //- > movieRepository
@@ -102,12 +93,28 @@ public class MovieController {
         return "02-checkmovie"; // 목록
     }
 
+    //check 한거 checkmovieRepository로
+    @PostMapping("/02-checkmovie.html")
+    public String checkmovietoForm(CheckMovieDto checkmovieDto) {
+        CheckMovie checkMovie = movieService.savemovie(checkmovieDto); // checkmovierepository 로 저장
+
+        return "02-1-checkmovie_result";
+    }
+
+    //2
     @RequestMapping("/02-checkmovie-2.html")
     public String allMovie2(Model model) {
         List<Movie> movieList = movieRepository.findAll(); //- > movieRepository
         model.addAttribute("movieList", movieList);
 
         return "02-checkmovie-2"; // 목록
+    }
+
+    @PostMapping("/02-checkmovie-2.html")
+    public String checkmovietoForm2(CheckMovieDto checkmovieDto) {
+        CheckMovie checkMovie = movieService.savemovie(checkmovieDto); // checkmovierepository 로 저장
+
+        return "02-1-checkmovie_result";
     }
 
 }
