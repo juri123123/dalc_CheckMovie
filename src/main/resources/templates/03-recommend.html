@@ -243,16 +243,16 @@
                                 <!--**********************책*************************-->
                                 <div class="overlap-group4-1">
                                     <div class="rectangle-19"></div>
-                                    <div class="text-83" th:text = ${book.description} ><!--**********************책설명*************************-->
+                                    <div class="text-83" th:text = ${bookList[num].description} ><!--**********************책설명*************************-->
                                     </div>
                                 </div>
                                 <div class="title"><!--**********************책이름*************************-->
-                                    <div class="text-84 fontawesome5free-solid-normal-white-40px" th:text = ${book.title}></div>
+                                    <div class="text-84 fontawesome5free-solid-normal-white-40px" th:text = ${bookList[num].title}></div>
                                     <img class="title-1" src="img/title@1x.png" />
                                 </div>
                             </div>
                             <!--**********************책 이미지*************************-->
-                                <img class="image-9" th:src = "${book.book_img}" th:if="${book.book_img != null}" />
+                                <img class="image-9" th:src = "${bookList[num].book_img}" th:if="${bookList[num].book_img != null}" />
                             </th:block>
                         </div>
                     </div>
