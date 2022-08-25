@@ -199,26 +199,24 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <th:block
-                                                        th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
+                                                    th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
                                                     <!--**********************백그라운드로 이미지가 깔려있음*************************-->
                                                     <div id='click1' class="overlap-group9  border-1px-black-3"
-                                                         onclick="checkClick()">
+                                                        onclick="checkClick()">
                                                         <input type="hidden" class="checkbox" />
-                                                        <div class="text-2 fontawesome5free-solid-normal-white-40px">
-                                                            
+                                                        <div class="text-2 fontawesome5free-solid-normal-white-40px">
                                                         </div>
                                                     </div>
-                                                    <img class="img-in-swiper"
-                                                         th:src="${movieList[0].movie_img}"
-                                                         th:if="${movieList[0].movie_img != null}" />
+                                                    <img class="img-in-swiper" th:src="${movieList[0].movie_img}"
+                                                        th:if="${movieList[0].movie_img != null}" />
                                                     <div class="caption-bg"></div>
                                                     <div class="text-21 opensans-bold-white-20px"
-                                                         th:text=${movieList[0].title}></div>
+                                                        th:text=${movieList[0].title}></div>
                                                 </th:block>
                                             </div>
                                             <div class="swiper-slide">
                                                 <th:block
-                                                        th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
+                                                    th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
                                                     <!--**********************백그라운드로 이미지가 깔려있음*************************-->
                                                     <div id='click2' class="overlap-group9 border-1px-black-3"
                                                          onclick="checkClick2()">
@@ -227,18 +225,17 @@
                                                             
                                                         </div>
                                                     </div>
-                                                    <img    class="img-in-swiper"
-                                                            th:src="${movieList[1].movie_img}"
-                                                            th:if="${movieList[1].movie_img != null}" />
+                                                    <img class="img-in-swiper" th:src="${movieList[1].movie_img}"
+                                                        th:if="${movieList[1].movie_img != null}" />
                                                     <div class="caption-bg"></div>
                                                     <div class="text-21 opensans-bold-white-20px"
-                                                         th:text=${movieList[1].title}></div>
+                                                        th:text=${movieList[1].title}></div>
                                                     <!--**********************설명*************************-->
                                                 </th:block>
                                             </div>
                                             <div class="swiper-slide">
                                                 <th:block
-                                                        th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
+                                                    th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
                                                     <!--**********************백그라운드로 이미지가 깔려있음*************************-->
                                                     <div id='click3' class="overlap-group9 border-1px-black-3"
                                                          onclick="checkClick3()">
@@ -247,19 +244,18 @@
                                                             
                                                         </div>
                                                     </div>
-                                                    <img    class="img-in-swiper"
-                                                            th:src="${movieList[2].movie_img}"
-                                                            th:if="${movieList[2].movie_img != null}" />
+                                                    <img class="img-in-swiper" th:src="${movieList[2].movie_img}"
+                                                        th:if="${movieList[2].movie_img != null}" />
                                                     <div class="caption-bg"></div>
                                                     <div class="text-21 opensans-bold-white-20px"
-                                                         th:text=${movieList[2].title}></div>
+                                                        th:text=${movieList[2].title}></div>
                                                     <!--**********************설명*************************-->
                                                 </th:block>
                                             </div>
 
                                             <div class="swiper-slide">
                                                 <th:block
-                                                        th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
+                                                    th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
                                                     <!--**********************백그라운드로 이미지가 깔려있음*************************-->
                                                     <div id='click4' class="overlap-group9  border-1px-black-3"
                                                          onclick="checkClick4()">
@@ -268,17 +264,16 @@
                                                             
                                                         </div>
                                                     </div>
-                                                    <img    class="img-in-swiper"
-                                                            th:src="${movieList[3].movie_img}"
-                                                            th:if="${movieList[3].movie_img != null}" />
+                                                    <img class="img-in-swiper" th:src="${movieList[3].movie_img}"
+                                                        th:if="${movieList[3].movie_img != null}" />
                                                     <div class="caption-bg"></div>
                                                     <div class="text-21 opensans-bold-white-20px"
-                                                         th:text=${movieList[3].title}></div>
+                                                        th:text=${movieList[3].title}></div>
                                                 </th:block>
                                             </div>
                                             <div class="swiper-slide">
                                                 <th:block
-                                                        th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
+                                                    th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
                                                     <!--**********************백그라운드로 이미지가 깔려있음*************************-->
                                                     <div id='click5' class="overlap-group9  border-1px-black-3"
                                                          onclick="checkClick5()">
@@ -287,17 +282,16 @@
                                                             
                                                         </div>
                                                     </div>
-                                                    <img    class="img-in-swiper"
-                                                            th:src="${movieList[5].movie_img}"
-                                                            th:if="${movieList[5].movie_img != null}" />
+                                                    <img class="img-in-swiper" th:src="${movieList[5].movie_img}"
+                                                        th:if="${movieList[5].movie_img != null}" />
                                                     <div class="caption-bg"></div>
                                                     <div class="text-21 opensans-bold-white-20px"
-                                                         th:text=${movieList[5].title}></div>
+                                                        th:text=${movieList[5].title}></div>
                                                 </th:block>
                                             </div>
                                             <div class="swiper-slide">
                                                 <th:block
-                                                        th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
+                                                    th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
                                                     <!--**********************백그라운드로 이미지가 깔려있음*************************-->
                                                     <div id='click6' class="overlap-group9  border-1px-black-3"
                                                          onclick="checkClick6()">
@@ -306,17 +300,16 @@
                                                             
                                                         </div>
                                                     </div>
-                                                    <img    class="img-in-swiper"
-                                                            th:src="${movieList[6].movie_img}"
-                                                            th:if="${movieList[6].movie_img != null}" />
+                                                    <img class="img-in-swiper" th:src="${movieList[6].movie_img}"
+                                                        th:if="${movieList[6].movie_img != null}" />
                                                     <div class="caption-bg"></div>
                                                     <div class="text-21 opensans-bold-white-20px"
-                                                         th:text=${movieList[6].title}></div>
+                                                        th:text=${movieList[6].title}></div>
                                                 </th:block>
                                             </div>
                                             <div class="swiper-slide">
                                                 <th:block
-                                                        th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
+                                                    th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
                                                     <!--**********************백그라운드로 이미지가 깔려있음*************************-->
                                                     <div id='click7' class="overlap-group9  border-1px-black-3"
                                                          onclick="checkClick7()">
@@ -325,17 +318,16 @@
                                                             
                                                         </div>
                                                     </div>
-                                                    <img    class="img-in-swiper"
-                                                            th:src="${movieList[7].movie_img}"
-                                                            th:if="${movieList[7].movie_img != null}" />
+                                                    <img class="img-in-swiper" th:src="${movieList[7].movie_img}"
+                                                        th:if="${movieList[7].movie_img != null}" />
                                                     <div class="caption-bg"></div>
                                                     <div class="text-21 opensans-bold-white-20px"
-                                                         th:text=${movieList[7].title}></div>
+                                                        th:text=${movieList[7].title}></div>
                                                 </th:block>
                                             </div>
                                             <div class="swiper-slide">
                                                 <th:block
-                                                        th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
+                                                    th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
                                                     <!--**********************백그라운드로 이미지가 깔려있음*************************-->
                                                     <div id='click8' class="overlap-group9  border-1px-black-3"
                                                          onclick="checkClick8()">
@@ -344,17 +336,16 @@
                                                             
                                                         </div>
                                                     </div>
-                                                    <img    class="img-in-swiper"
-                                                            th:src="${movieList[10].movie_img}"
-                                                            th:if="${movieList[10].movie_img != null}" />
+                                                    <img class="img-in-swiper" th:src="${movieList[10].movie_img}"
+                                                        th:if="${movieList[10].movie_img != null}" />
                                                     <div class="caption-bg"></div>
                                                     <div class="text-21 opensans-bold-white-20px"
-                                                         th:text=${movieList[10].title}></div>
+                                                        th:text=${movieList[10].title}></div>
                                                 </th:block>
                                             </div>
                                             <div class="swiper-slide">
                                                 <th:block
-                                                        th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
+                                                    th:with="num = ${#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()*1000),1,0)}">
                                                     <!--**********************백그라운드로 이미지가 깔려있음*************************-->
                                                     <div id='click9' class="overlap-group9  border-1px-black-3"
                                                          onclick="checkClick9()">
@@ -363,21 +354,24 @@
                                                             
                                                         </div>
                                                     </div>
-                                                    <img    class="img-in-swiper"
-                                                            th:src="${movieList[12].movie_img}"
-                                                            th:if="${movieList[12].movie_img != null}" />
+                                                    <img class="img-in-swiper" th:src="${movieList[12].movie_img}"
+                                                        th:if="${movieList[12].movie_img != null}" />
                                                     <div class="caption-bg"></div>
                                                     <div class="text-21 opensans-bold-white-20px"
-                                                         th:text=${movieList[12].title}></div>
+                                                        th:text=${movieList[12].title}></div>
                                                 </th:block>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="place-2">
-                                        <form method="post" action="">
-                                            <input type="submit" value="Get book recommendations" class="recommend-btn">
-                                        </form>
-                                    </div>
+                                        <div class="place-2">
+                                            
+                                            <form method="post" action="02-1-checkmovie_result.html">
+                                                
+                                                   <input  type="button" onclick="location.href='02-1-checkmovie_result.html';"  class="recommend-btn" value="Get book recommendations">
+                                                
+                                            </form>
+                                        </div>
+                                    
                                     <!-- Swiper JS -->
                                     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 

@@ -47,12 +47,12 @@ public class MovieController {
     }
 
     @RequestMapping("/02-1-checkmovie_result.html")
-    public String result(@PathVariable Integer book_id, Model model) {
-//        List<Recommend_book> bookList = recommend_bookRepository.findAll(); //- > bookRepository
-//        model.addAttribute("bookList", bookList);
-//
-        Recommend_book recommend_book = recommend_bookRepository.findById(book_id).orElse(null);
-        model.addAttribute("book", recommend_book);
+    public String result(Model model) {
+        List<Recommend_book> bookList = recommend_bookRepository.findAll(); //- > bookRepository
+        model.addAttribute("bookList", bookList);
+
+//        Recommend_book recommend_book = recommend_bookRepository.findById(book_id).orElse(null);
+//        model.addAttribute("book", recommend_book);
 
         return "02-1-checkmovie_result";
     }
