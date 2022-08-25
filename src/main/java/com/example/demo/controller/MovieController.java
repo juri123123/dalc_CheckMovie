@@ -105,7 +105,7 @@ public class MovieController {
     public String checkmovietoForm(MovieDto checkMovieDto) {
         Movie checkMovie = movieService.savemovie(checkMovieDto); // checkmovierepository 로 저장
 
-        return "02-1-checkmovie_result";
+        return "redirect:/02-1-checkmovie_result";
     }
 
     //2
