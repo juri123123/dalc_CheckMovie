@@ -11,9 +11,4 @@ public class MovieService {
     @Autowired
     private CheckMovieRepository checkMovieRepository;
 
-    // 선택한 영화 저장 -> checkmovieRepository
-    public Movie savemovie(MovieDto movieDto) {
-        Movie movie = movieDto.toEntity();
-        return checkMovieRepository.save(movie);
-    }
 }
