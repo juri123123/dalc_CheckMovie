@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 import com.example.demo.dto.MovieDto;
 import com.example.demo.entity.Book;
+import com.example.demo.entity.Recommend_book;
 import com.example.demo.repository.BookRepository;
 import com.example.demo.repository.CheckMovieRepository;
+import com.example.demo.repository.Recommend_bookRepository;
 import com.example.demo.service.MovieService;
 import com.example.demo.dto.CheckMovieDto;
 import com.example.demo.entity.CheckMovie;
@@ -27,6 +29,9 @@ public class MovieController {
     private BookRepository bookRepository;
 
     @Autowired
+    private Recommend_bookRepository recommend_bookRepository;
+
+    @Autowired
     private CheckMovieRepository checkMovieRepository;
 
     // book_id 로 찾기 ! -> 아직 id 없어서 오류남
@@ -43,11 +48,11 @@ public class MovieController {
 
     @RequestMapping("/02-1-checkmovie_result.html")
     public String result(@PathVariable Integer book_id, Model model) {
-//        List<Book> bookList = bookRepository.findAll(); //- > bookRepository
+//        List<Recommend_book> bookList = recommend_bookRepository.findAll(); //- > bookRepository
 //        model.addAttribute("bookList", bookList);
-
-        Book book = bookRepository.findById(book_id).orElse(null);
-        model.addAttribute("book", book);
+//
+        Recommend_book recommend_book = recommend_bookRepository.findById(book_id).orElse(null);
+        model.addAttribute("book", recommend_book);
 
         return "02-1-checkmovie_result";
     }
