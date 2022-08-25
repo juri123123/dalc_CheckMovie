@@ -36,12 +36,9 @@ public class MovieController {
 
     // book_id 로 찾기 ! -> 아직 id 없어서 오류남
     @RequestMapping("/03-recommend.html")
-    public String recommend(@PathVariable Integer book_id, Model model) {
-//        List<Book> bookList = bookRepository.findAll(); //- > bookRepository
-//        model.addAttribute("bookList", bookList);
-
-        Book book = bookRepository.findById(book_id).orElse(null);
-        model.addAttribute("book", book);
+    public String recommend( Model model) {
+       List<Recommend_book> bookList = recommend_bookRepository.findAll(); //- > bookRepository
+        model.addAttribute("bookList", bookList);
 
         return "03-recommend";
     }
